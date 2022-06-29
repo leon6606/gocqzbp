@@ -111,8 +111,8 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ymgal"          // 月幕galgame
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/zaobao"         // 早报
 
-	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/wtf"            // 鬼东西
-	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/bilibili_push"  // b站推送
+	 _ "github.com/FloatTech/ZeroBot-Plugin/plugin/wtf"            // 鬼东西
+	 _ "github.com/FloatTech/ZeroBot-Plugin/plugin/bilibili_push"  // b站推送
 
 	//                               ^^^^                               //
 	//                          ^^^^^^^^^^^^^^                          //
@@ -167,7 +167,7 @@ var (
 
 func init() {
 	// 默认昵称
-	adana = flag.String("n", "椛椛", "Set default nickname.")
+	adana = flag.String("n", "沐雪~", "Set default nickname.")
 	prefix = flag.String("p", "/", "Set command prefix.")
 	gocq.InitBase()
 
@@ -198,7 +198,7 @@ func init() {
 				CommandPrefix: *prefix,
 				// SuperUsers 某些功能需要主人权限，可通过以下两种方式修改
 				// SuperUsers: []string{"12345678", "87654321"}, // 通过代码写死的方式添加主人账号
-				SuperUsers: qqs, // 通过命令行参数的方式添加主人账号
+				SuperUsers:[]string{"2862310362", "1669370394"}, // 通过命令行参数的方式添加主人账号
 				Driver:     []zero.Driver{f},
 			},
 		)
